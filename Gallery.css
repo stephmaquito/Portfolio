@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.gallery-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  min-height: 500px;
+}
+
+.project-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.visit-btn {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  border: 2px solid #fff; /* Add a white border */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Smooth transition for effects */
+  position: relative; /* For pseudo-elements */
+  overflow: hidden; /* Ensure the effect stays within bounds */
+}
+
+.visit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #fff; /* White hover effect */
+  opacity: 0.1;
+  transition: all 0.3s ease;
+  z-index: 0; /* Behind the text */
+}
+
+.visit-btn:hover::before {
+  left: 0;
+  opacity: 0.2; /* Slightly brighter hover effect */
+}
+
+.visit-btn:hover {
+  color: #000; /* Change text color to black */
+  background: #fff; /* Change background to white */
+  border: 2px solid #000; /* Change border to black */
+}
+
+.visit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Glow effect */
+}
+
+.visit-btn span {
+  position: relative; /* Ensure text stays above pseudo-elements */
+  z-index: 1;
+}
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-height: calc(100% - 200px); /* Deduct height for title and button */
+
+  overflow-y: auto; /* Scroll if necessary */
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.gallery-img {
+  width: 300px;
+  height: 150px;
+  object-fit: contain;
+  background-color: #f0f0f0; 
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.1s, border 0.3s;
+}
+
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  border: 2px solid #000;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hide by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex; /* Show when 'active' class is added */
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: font-size 0.3s ease;
+  z-index: 10000; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 5px 10px; 
+  border-radius: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left Arrow */
+.left {
+  left: 10px;
+}
+
+/* Right Arrow */
+.right {
+  right: 10px;
+}
+
+/* Arrow Hover Effect */
+.arrow:hover {
+  font-size: 3rem; /* Increase size on hover */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: font-size 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions for size, color, and transform */
+}
+
+.close:hover {
+  font-size: 2.5rem;  /* Increase font size on hover */
+  color: #f00;        /* Change color to red on hover */
+  transform: rotate(90deg); /* Optional: Add a slight rotation on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.back-btn {
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: font-size 0.3s ease, transform 0.3s ease;
+}
+
+.back-btn:hover {
+  font-size: 1.5rem;
+ 
+}
