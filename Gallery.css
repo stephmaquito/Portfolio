@@ -23,21 +23,22 @@ body {
 
 .project-title {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin: 20px;
+  max-width: 70vw;
 }
 
 .visit-btn {
   padding: 10px 20px;
   margin-bottom: 20px;
-  background: #000; /* Black background */
-  color: #fff; /* White text */
-  border: 2px solid #fff; /* Add a white border */
+  background: #000; 
+  color: #fff; 
+  border: 2px solid #fff; 
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
-  transition: all 0.3s ease; /* Smooth transition for effects */
-  position: relative; /* For pseudo-elements */
-  overflow: hidden; /* Ensure the effect stays within bounds */
+  transition: all 0.3s ease; 
+  position: relative; 
+  overflow: hidden; 
 }
 
 .visit-btn::before {
@@ -47,30 +48,30 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: #fff; /* White hover effect */
+  background: #fff; 
   opacity: 0.1;
   transition: all 0.3s ease;
-  z-index: 0; /* Behind the text */
+  z-index: 0; 
 }
 
 .visit-btn:hover::before {
   left: 0;
-  opacity: 0.2; /* Slightly brighter hover effect */
+  opacity: 0.2; 
 }
 
 .visit-btn:hover {
-  color: #000; /* Change text color to black */
-  background: #fff; /* Change background to white */
-  border: 2px solid #000; /* Change border to black */
+  color: #000; 
+  background: #fff; 
+  border: 2px solid #000; 
 }
 
 .visit-btn:focus {
   outline: none;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Glow effect */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); 
 }
 
 .visit-btn span {
-  position: relative; /* Ensure text stays above pseudo-elements */
+  position: relative; 
   z-index: 1;
 }
 
@@ -82,11 +83,12 @@ body {
   justify-content: center;
   align-items: center;
   width: 80%;
-  max-height: calc(100% - 200px); /* Deduct height for title and button */
+  max-height: calc(100% - 200px); 
 
-  overflow-y: auto; /* Scroll if necessary */
+  overflow-y: auto;
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
 }
 
 .gallery-img {
@@ -105,22 +107,22 @@ body {
   border: 2px solid #000;
 }
 
-/* Modal Styles */
+
 .modal {
-  display: none; /* Hide by default */
+  display: none; 
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  background-color: rgba(0, 0, 0, 0.8); 
   justify-content: center;
   align-items: center;
 }
 
 .modal.active {
-  display: flex; /* Show when 'active' class is added */
+  display: flex; 
 }
 
 .modal-content {
@@ -147,20 +149,20 @@ body {
   align-items: center;
 }
 
-/* Left Arrow */
+
 .left {
   left: 10px;
 }
 
-/* Right Arrow */
+
 .right {
   right: 10px;
 }
 
-/* Arrow Hover Effect */
+
 .arrow:hover {
-  font-size: 3rem; /* Increase size on hover */
-  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  font-size: 3rem; 
+  background-color: rgba(0, 0, 0, 0.8); 
 }
 
 
@@ -172,13 +174,13 @@ body {
   font-size: 2rem;
   color: white;
   cursor: pointer;
-  transition: font-size 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions for size, color, and transform */
+  transition: font-size 0.3s ease, color 0.3s ease, transform 0.3s ease; 
 }
 
 .close:hover {
-  font-size: 2.5rem;  /* Increase font size on hover */
-  color: #f00;        /* Change color to red on hover */
-  transform: rotate(90deg); /* Optional: Add a slight rotation on hover */
+  font-size: 2.5rem;  
+  color: #f00;       
+  transform: rotate(90deg); 
 }
 
 
@@ -194,15 +196,27 @@ body {
 
 
 .back-btn {
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   position: absolute;
   top: 20px;
   left: 20px;
   transition: font-size 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
 }
 
 .back-btn:hover {
   font-size: 1.5rem;
- 
+  transform: scale(1.1);
+}
+
+.back-btn i {
+  pointer-events: none;
 }
