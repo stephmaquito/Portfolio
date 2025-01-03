@@ -362,10 +362,10 @@ header {
 
 
 #skills.snap-section{
-  min-width: calc(100vw - 80px);
+  min-width: calc(100% - 80px);
   height: auto;
   margin-left: 80px;
-  padding: 2rem;
+  padding: 30px;
   min-height: 100vh;
 }
 
